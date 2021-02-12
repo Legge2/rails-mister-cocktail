@@ -35,7 +35,8 @@ private
 
   def cocktail_params
     params.require(:cocktail).permit(
-      :name)
+      :name,
+      :photo)
   end
 
 end

@@ -5,7 +5,10 @@
     <div class="col-lg-8">
       <% @cocktails.each do |cocktail| %>
         <%= link_to(cocktail_path(cocktail)) do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.com/photos/QsmdVT5pTMw');">
+
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+
+
             <div class="card-category">
               <%= link_to cocktail.name, cocktail_path(cocktail) %>
             </div>
@@ -21,4 +24,12 @@
   <%= link_to "Create Cocktail", new_cocktail_path %>
 </button>
 
+<div>
+  <p> Cloudinary Image Bridge: </p>
+  <%= cl_image_tag("f2vf77gafp7nocfzkoibwzcexz62.jpg", width: 400, height: 300, crop: :fill) %>
+</div>
 
+<div>
+  <p> Exemple for face detection: </p>
+  <%= cl_image_tag("uscblpbkfdyzyjzeeqze.jpg", width: 150, height: 150, crop: :thumb, gravity: :face) %>
+</div>
