@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h1>Best Cocktails</h1>
+  <div class="row">
+    <div class="col-lg-8">
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to(cocktail_path(cocktail)) do %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.com/photos/QsmdVT5pTMw');">
+            <div class="card-category">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </div>
+          </div>
+          <p> </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<button>
+  <%= link_to "Create Cocktail", new_cocktail_path %>
+</button>
+
+
